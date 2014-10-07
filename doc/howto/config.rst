@@ -11,6 +11,9 @@ Below you will find a list of all the used directives in alphabetical order.
 The configuration is written as a python module which contains a named
 dictionary ("CONFIG") that contains the configuration directives.
 
+NOTE: as this is loaded as a python module, it should be named as something 
+with a file suffix of '.py'. 
+
 The basic structure of the configuration file is therefore like this::
 
     from saml2 import BINDING_HTTP_REDIRECT
@@ -44,6 +47,10 @@ The basic structure of the configuration file is therefore like this::
 .. note:: You can build the metadata file for your services directly from the
     configuration.The make_metadata.py script in the pySAML2 tools directory
     will do that for you.
+    
+    An example of using this script:
+    
+    make_metadata.py pysaml2_conf.py
 
 Configuration directives
 ::::::::::::::::::::::::
